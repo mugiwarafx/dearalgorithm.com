@@ -1,0 +1,97 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:100,300,400);
+@import url(https://fonts.googleapis.com/css2?family=B612+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap);
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #282a36;
+}
+
+.lil-gui {
+    z-index: 2 !important;
+    display: none !important;
+}
+
+@media all and (max-width: 640px) {
+    .lil-gui.root {
+        right: auto;
+        top: auto;
+        max-height: 50%;
+        max-width: 80%;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+#overlay {
+    position: absolute;
+    font-size: 16px;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+#overlay button {
+    background: transparent;
+    border: 0;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 4px;
+    color: #ffffff;
+    padding: 12px 18px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+#notSupported {
+    width: 50%;
+    margin: auto;
+    background-color: #f00;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+nav {
+    background: #282a36;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    padding-right: 3vw; 
+}
+
+nav a {
+    margin-right:2vw;
+    margin-left:2vw;
+    color: #50fa7b;
+    font-family: 'B612 Mono', monospace;
+    text-transform: lowercase;
+    text-decoration: line-through;
+    letter-spacing: -1px;
+    cursor: pointer;
+}
+
+nav a:hover, nav a:active, nav a:focus {
+    color: #ffb86c;
+    text-decoration: none;
+    transition: 0.3s
+}
+
+footer h1 {
+    position: fixed;
+    color: white;
+    font-family: 'Arial';
+    font-weight: bold;
+    bottom: 0;
+    right: 0;
+}
+
+/*# sourceMappingURL=main.css.map*/
