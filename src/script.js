@@ -3,27 +3,13 @@ import disc from '../static/textures/sprites/disc.png'
 
 import * as THREE from 'three'
 
-console.log(
-  '%cTao of Programming: https://www.mit.edu/~xela/tao.html',
-  'background: #282a36; color: #50fa7b'
-)
-console.log(
-  '%cDiscord: varequalsjordi#2376',
-  'background: #282a36; color: #ffb86c'
-)
-console.log(
-  '%cUS Phone: +1 (888) 355-7860',
-  'background: #282a36; color: #ff79c6'
-)
+console.log('%cTao of Programming: https://www.mit.edu/~xela/tao.html', 'background: #282a36; color: #50fa7b')
+console.log('%cDiscord: varequalsjordi#2376', 'background: #282a36; color: #ffb86c')
+console.log('%cUS Phone: +1 (888) 355-7860', 'background: #282a36; color: #ff79c6')
 
-console.log(
-  '%cEU Phone: +34 682 23 55 96',
-  'background: #282a36; color: #bd93f9'
-)
+console.log('%cEU Phone: +34 682 23 55 96', 'background: #282a36; color: #bd93f9')
 
-console.log(
-  'Please, be nice with me, I am just a RPi with undervoltage problems 🏴‍☠️\nMany thanks 🌷'
-)
+console.log('Please, be nice with me, I am just a RPi with undervoltage problems 🏴‍☠️\nMany thanks 🌷')
 
 import {
   BoxGeometry,
@@ -124,17 +110,7 @@ const guis = {
     }
 
     function generateGeometry() {
-      updateGroupGeometry(
-        mesh,
-        new BoxGeometry(
-          data.width,
-          data.height,
-          data.depth,
-          data.widthSegments,
-          data.heightSegments,
-          data.depthSegments
-        )
-      )
+      updateGroupGeometry(mesh, new BoxGeometry(data.width, data.height, data.depth, data.widthSegments, data.heightSegments, data.depthSegments))
     }
 
     const folder = gui.addFolder('THREE.BoxGeometry')
@@ -158,15 +134,7 @@ const guis = {
     }
 
     function generateGeometry() {
-      updateGroupGeometry(
-        mesh,
-        new CapsuleGeometry(
-          data.radius,
-          data.length,
-          data.capSegments,
-          data.heightSegments
-        )
-      )
+      updateGroupGeometry(mesh, new CapsuleGeometry(data.radius, data.length, data.capSegments, data.heightSegments))
     }
 
     const folder = gui.addFolder('THREE.CapsuleGeometry')
@@ -235,15 +203,7 @@ const guis = {
     function generateGeometry() {
       updateGroupGeometry(
         mesh,
-        new ConeGeometry(
-          data.radius,
-          data.height,
-          data.radialSegments,
-          data.heightSegments,
-          data.openEnded,
-          data.thetaStart,
-          data.thetaLength
-        )
+        new ConeGeometry(data.radius, data.height, data.radialSegments, data.heightSegments, data.openEnded, data.thetaStart, data.thetaLength)
       )
     }
 
@@ -269,15 +229,7 @@ const guis = {
     }
 
     function generateGeometry() {
-      updateGroupGeometry(
-        mesh,
-        new CircleGeometry(
-          data.radius,
-          data.segments,
-          data.thetaStart,
-          data.thetaLength
-        )
-      )
+      updateGroupGeometry(mesh, new CircleGeometry(data.radius, data.segments, data.thetaStart, data.thetaLength))
     }
 
     const folder = gui.addFolder('THREE.CircleGeometry')
@@ -297,10 +249,7 @@ const guis = {
     }
 
     function generateGeometry() {
-      updateGroupGeometry(
-        mesh,
-        new DodecahedronGeometry(data.radius, data.detail)
-      )
+      updateGroupGeometry(mesh, new DodecahedronGeometry(data.radius, data.detail))
     }
 
     const folder = gui.addFolder('THREE.DodecahedronGeometry')
@@ -318,10 +267,7 @@ const guis = {
     }
 
     function generateGeometry() {
-      updateGroupGeometry(
-        mesh,
-        new IcosahedronGeometry(data.radius, data.detail)
-      )
+      updateGroupGeometry(mesh, new IcosahedronGeometry(data.radius, data.detail))
     }
 
     const folder = gui.addFolder('THREE.IcosahedronGeometry')
@@ -346,12 +292,7 @@ const guis = {
     }
 
     function generateGeometry() {
-      const geometry = new LatheGeometry(
-        points,
-        data.segments,
-        data.phiStart,
-        data.phiLength
-      )
+      const geometry = new LatheGeometry(points, data.segments, data.phiStart, data.phiLength)
 
       updateGroupGeometry(mesh, geometry)
     }
@@ -372,10 +313,7 @@ const guis = {
     }
 
     function generateGeometry() {
-      updateGroupGeometry(
-        mesh,
-        new OctahedronGeometry(data.radius, data.detail)
-      )
+      updateGroupGeometry(mesh, new OctahedronGeometry(data.radius, data.detail))
     }
 
     const folder = gui.addFolder('THREE.OctahedronGeometry')
@@ -395,15 +333,7 @@ const guis = {
     }
 
     function generateGeometry() {
-      updateGroupGeometry(
-        mesh,
-        new PlaneGeometry(
-          data.width,
-          data.height,
-          data.widthSegments,
-          data.heightSegments
-        )
-      )
+      updateGroupGeometry(mesh, new PlaneGeometry(data.width, data.height, data.widthSegments, data.heightSegments))
     }
 
     const folder = gui.addFolder('THREE.PlaneGeometry')
@@ -429,14 +359,7 @@ const guis = {
     function generateGeometry() {
       updateGroupGeometry(
         mesh,
-        new RingGeometry(
-          data.innerRadius,
-          data.outerRadius,
-          data.thetaSegments,
-          data.phiSegments,
-          data.thetaStart,
-          data.thetaLength
-        )
+        new RingGeometry(data.innerRadius, data.outerRadius, data.thetaSegments, data.phiSegments, data.thetaStart, data.thetaLength)
       )
     }
 
@@ -466,15 +389,7 @@ const guis = {
     function generateGeometry() {
       updateGroupGeometry(
         mesh,
-        new SphereGeometry(
-          data.radius,
-          data.widthSegments,
-          data.heightSegments,
-          data.phiStart,
-          data.phiLength,
-          data.thetaStart,
-          data.thetaLength
-        )
+        new SphereGeometry(data.radius, data.widthSegments, data.heightSegments, data.phiStart, data.phiLength, data.thetaStart, data.thetaLength)
       )
     }
 
@@ -498,10 +413,7 @@ const guis = {
     }
 
     function generateGeometry() {
-      updateGroupGeometry(
-        mesh,
-        new TetrahedronGeometry(data.radius, data.detail)
-      )
+      updateGroupGeometry(mesh, new TetrahedronGeometry(data.radius, data.detail))
     }
 
     const folder = gui.addFolder('THREE.TetrahedronGeometry')
@@ -522,16 +434,7 @@ const guis = {
     }
 
     function generateGeometry() {
-      updateGroupGeometry(
-        mesh,
-        new TorusGeometry(
-          data.radius,
-          data.tube,
-          data.radialSegments,
-          data.tubularSegments,
-          data.arc
-        )
-      )
+      updateGroupGeometry(mesh, new TorusGeometry(data.radius, data.tube, data.radialSegments, data.tubularSegments, data.arc))
     }
 
     const folder = gui.addFolder('THREE.TorusGeometry')
@@ -539,10 +442,7 @@ const guis = {
     folder.add(data, 'radius', 1, 20).onChange(generateGeometry)
     folder.add(data, 'tube', 0.1, 10).onChange(generateGeometry)
     folder.add(data, 'radialSegments', 2, 30).step(1).onChange(generateGeometry)
-    folder
-      .add(data, 'tubularSegments', 3, 200)
-      .step(1)
-      .onChange(generateGeometry)
+    folder.add(data, 'tubularSegments', 3, 200).step(1).onChange(generateGeometry)
     folder.add(data, 'arc', 0.1, twoPi).onChange(generateGeometry)
 
     generateGeometry()
@@ -559,27 +459,14 @@ const guis = {
     }
 
     function generateGeometry() {
-      updateGroupGeometry(
-        mesh,
-        new TorusKnotGeometry(
-          data.radius,
-          data.tube,
-          data.tubularSegments,
-          data.radialSegments,
-          data.p,
-          data.q
-        )
-      )
+      updateGroupGeometry(mesh, new TorusKnotGeometry(data.radius, data.tube, data.tubularSegments, data.radialSegments, data.p, data.q))
     }
 
     const folder = gui.addFolder('THREE.TorusKnotGeometry')
 
     folder.add(data, 'radius', 1, 20).onChange(generateGeometry)
     folder.add(data, 'tube', 0.1, 10).onChange(generateGeometry)
-    folder
-      .add(data, 'tubularSegments', 3, 300)
-      .step(1)
-      .onChange(generateGeometry)
+    folder.add(data, 'tubularSegments', 3, 300).step(1).onChange(generateGeometry)
     folder.add(data, 'radialSegments', 3, 20).step(1).onChange(generateGeometry)
     folder.add(data, 'p', 1, 20).step(1).onChange(generateGeometry)
     folder.add(data, 'q', 1, 20).step(1).onChange(generateGeometry)
@@ -597,16 +484,7 @@ const guis = {
     const path = new CustomSinCurve(10)
 
     function generateGeometry() {
-      updateGroupGeometry(
-        mesh,
-        new TubeGeometry(
-          path,
-          data.segments,
-          data.radius,
-          data.radialSegments,
-          false
-        )
-      )
+      updateGroupGeometry(mesh, new TubeGeometry(path, data.segments, data.radius, data.radialSegments, false))
     }
 
     const folder = gui.addFolder('THREE.TubeGeometry')
@@ -707,12 +585,7 @@ const gui = new GUI()
 const scene = new Scene()
 scene.background = new Color(0x282a36)
 
-const camera = new PerspectiveCamera(
-  75,
-  window.innerWidth / (window.innerHeight * 0.8),
-  0.1,
-  50
-)
+const camera = new PerspectiveCamera(75, window.innerWidth / (window.innerHeight * 0.8), 0.1, 50)
 camera.position.z = 40
 
 const renderer = new WebGLRenderer({ antialias: true })
@@ -797,7 +670,8 @@ const navHTML = `
 <nav>
   <a target="_blank" href="https://github.com/mugiwarafx">github</a>
   <a target="_blank" href="https://dearalgorithm.github.io/joji_fx/">blog</a> 
-  <a target="_blank" href="https://discord.gg/AxY3Vz92Pj">discord</a>
+  <a target="_blank" href="https://discord.gg/D8brSJSpaZ">discord</a>
+  <a target="_blank" href="https://internationalaccessibilitytaskforce.com/">iatf</a>
 </nav>
 `
 
